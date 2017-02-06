@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main()
+{
+	long long int i,n,fibo[100];
+	fibo[1]=1;
+	fibo[2]=2;
+
+	for(i=3;i<=82;i++)
+	{
+		fibo[i]=fibo[i-2]+fibo[i-1];
+	}
+
+	while(scanf("%lld",&n)==1)
+	{
+		if(n>0) printf("%lld\n",fibo[n]);
+		if(n==0)break;
+	}
+
+	return 0;
+}
